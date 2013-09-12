@@ -460,6 +460,7 @@
 				DBD63E0717E1A07E00E941BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DBD63E0817E1A07E00E941BA /* Build configuration list for PBXNativeTarget "TimeCardTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +469,7 @@
 				DBD63E0A17E1A07E00E941BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

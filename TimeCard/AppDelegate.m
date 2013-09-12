@@ -25,7 +25,7 @@
     [self appendToTimeCard: _clockedInAt];
     
     [_commentField setEditable: YES];
-    [[_commentField window] makeFirstResponder: _commentField];
+    [self.window makeFirstResponder: _commentField];
     
     [_clockInOutButton setTitle: @"Clock Out"];
     [_clockInOutButton setAction: @selector(clockOut:)];
@@ -48,7 +48,7 @@
     
     [_clockInOutButton setTitle: @"Clock In"];
     [_clockInOutButton setAction: @selector(clockIn:)];
-    [[_clockInOutButton window] makeFirstResponder: _clockInOutButton];
+    [self.window makeFirstResponder: _clockInOutButton];
 }
 
 - (IBAction) openFile: (id)sender {
