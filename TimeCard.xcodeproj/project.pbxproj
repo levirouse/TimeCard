@@ -17,6 +17,8 @@
 		DBD63DF717E1A07E00E941BA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD63DD717E1A07E00E941BA /* Cocoa.framework */; };
 		DBD63DFF17E1A07E00E941BA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBD63DFD17E1A07E00E941BA /* InfoPlist.strings */; };
 		DBD63E0217E1A07E00E941BA /* TimeCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD63E0117E1A07E00E941BA /* TimeCardTests.m */; };
+		DBD63E0C17E1A12B00E941BA /* TimeCard.cs in Resources */ = {isa = PBXBuildFile; fileRef = DBD63E0B17E1A12B00E941BA /* TimeCard.cs */; };
+		DBD63E0E17E1A63200E941BA /* clock-tilt copy.icns in Resources */ = {isa = PBXBuildFile; fileRef = DBD63E0D17E1A63200E941BA /* clock-tilt copy.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		DBD63DFE17E1A07E00E941BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DBD63E0017E1A07E00E941BA /* TimeCardTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeCardTests.h; sourceTree = "<group>"; };
 		DBD63E0117E1A07E00E941BA /* TimeCardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeCardTests.m; sourceTree = "<group>"; };
+		DBD63E0B17E1A12B00E941BA /* TimeCard.cs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TimeCard.cs; path = ../../TimeCard.NET/TimeCard.cs; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		DBD63E0D17E1A63200E941BA /* clock-tilt copy.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "clock-tilt copy.icns"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +120,9 @@
 			children = (
 				DBD63DE917E1A07E00E941BA /* AppDelegate.h */,
 				DBD63DEA17E1A07E00E941BA /* AppDelegate.m */,
+				DBD63E0B17E1A12B00E941BA /* TimeCard.cs */,
 				DBD63DEC17E1A07E00E941BA /* MainMenu.xib */,
+				DBD63E0D17E1A63200E941BA /* clock-tilt copy.icns */,
 				DBD63DDE17E1A07E00E941BA /* Supporting Files */,
 			);
 			path = TimeCard;
@@ -227,6 +233,8 @@
 				DBD63DE217E1A07E00E941BA /* InfoPlist.strings in Resources */,
 				DBD63DE817E1A07E00E941BA /* Credits.rtf in Resources */,
 				DBD63DEE17E1A07E00E941BA /* MainMenu.xib in Resources */,
+				DBD63E0C17E1A12B00E941BA /* TimeCard.cs in Resources */,
+				DBD63E0E17E1A63200E941BA /* clock-tilt copy.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
