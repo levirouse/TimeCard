@@ -9,20 +9,20 @@
 #import "AppDelegate.h"
 
 @implementation AppDelegate  {
-    NSString *_clockedInAt;
+    NSString *_clockTime;
 }
 
-- (void) applicationDidFinishLaunching: (NSNotification *) aNotification{
+- (void) applicationDidFinishLaunching: (NSNotification *) aNotification {
     [_commentField setEditable: NO];
 }
 
-- (BOOL) applicationShouldTerminateAfterLastWindowClosed: (NSApplication *) app{
+- (BOOL) applicationShouldTerminateAfterLastWindowClosed: (NSApplication *) app {
     return YES;
 }
 
 - (IBAction) clockIn: (id)sender {
-    _clockedInAt = [self currentDateTimeString];
-    [self appendToTimeCard: _clockedInAt];
+    _clockTime = [self currentDateTimeString];
+    [self appendToTimeCard: _clockTime];
     
     [_commentField setEditable: YES];
     [self.window makeFirstResponder: _commentField];
@@ -32,14 +32,14 @@
 }
 
 - (IBAction) clockOut: (id)sender {
-    _clockedInAt = [self currentDateTimeString];
+    _clockTime = [self currentDateTimeString];
     
     NSString *comment = _commentField.stringValue;
     if (comment.length == 0) {
         comment = @"[No comment]";
     }
     
-    NSString *timeCardString = [[NSString alloc] initWithFormat: @", %@, %@\n", _clockedInAt, comment];
+    NSString *timeCardString = [[NSString alloc] initWithFormat: @",%@,%@\n", _clockTime, comment];
     
     [self appendToTimeCard: timeCardString];
     
@@ -52,18 +52,47 @@
 }
 
 - (IBAction) openFile: (id)sender {
+    NSOpenPanel *panel = [NSOpenPanel openPanel];
+    //[panel setMessage: @"Choose a file to open."];
+    [panel setAllowedFileTypes: @[@"public.plain-text"]];
+    
+    [panel beginWithCompletionHandler: ^(NSInteger result) {
+        if (result == NSFileHandlingPanelOKButton) {
+            NSArray* urls = [panel URLs];
+            
+            NSURL *url = [urls objectAtIndex: 0];
+            
+            NSString *string = [NSString stringWithContentsOfURL: url encoding: NSUTF8StringEncoding error: nil];
+            if (string) {
+                _timeCardView.string = string;
+            }
+        }
+    }];
 }
 
 - (IBAction) saveFile: (id)sender {
+    NSSavePanel *panel = [NSSavePanel savePanel];
+    [panel setAllowedFileTypes: @[@"public.plain-text"]];
+    [panel setNameFieldStringValue: @"Invoice1.text"];
+    
+    [panel beginSheetModalForWindow: self.window completionHandler:^(NSInteger result){
+        if (result == NSFileHandlingPanelOKButton)
+        {
+            NSURL *url = [panel URL];
+            NSString *string = _timeCardView.string;
+            
+            [string writeToURL: url atomically: YES encoding: NSUTF8StringEncoding error: nil];
+        }
+    }];
 }
 
 - (void) appendToTimeCard: (NSString *) string {
-    NSRange end = {self.timeCardView.string.length, 0};
+    NSRange end = {_timeCardView.string.length, 0};
     
-    [self.timeCardView replaceCharactersInRange: end withString: string];
+    [_timeCardView replaceCharactersInRange: end withString: string];
     
-    end = NSMakeRange(self.timeCardView.string.length, 0);
-    [self.timeCardView scrollRangeToVisible: end];
+    end = NSMakeRange(_timeCardView.string.length, 0);
+    [_timeCardView scrollRangeToVisible: end];
 }
 
 - (NSString *) currentDateTimeString
