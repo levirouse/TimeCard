@@ -12,9 +12,9 @@
 
 @property (assign) IBOutlet NSWindow *window;
 
-@property (nonatomic,strong) IBOutlet NSButton *clockInOutButton;
+@property (nonatomic,strong) IBOutlet NSButton    *clockInOutButton;
 @property (nonatomic,strong) IBOutlet NSTextField *commentField;
-@property (nonatomic,strong) IBOutlet NSTextView *timeCardView;
+@property (nonatomic,strong) IBOutlet NSTextView  *timeCardView;
 
 - (IBAction) clockIn:  (id)sender;
 - (IBAction) clockOut: (id)sender;
