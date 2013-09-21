@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "NSTextView+DisableWordWrap.h"
 
 @implementation AppDelegate {
     NSString *_clockTime;
@@ -14,6 +15,7 @@
 
 - (void) applicationDidFinishLaunching: (NSNotification *) aNotification {
     [_commentField setEditable: NO];
+    [_timeCardView disableWordWrap];
 }
 
 - (BOOL) applicationShouldTerminateAfterLastWindowClosed: (NSApplication *) app {

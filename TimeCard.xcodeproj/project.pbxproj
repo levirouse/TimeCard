@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DBBF2DAB17ED4D4A003C681F /* NSTextView+DisableWordWrap.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBF2DAA17ED4D4A003C681F /* NSTextView+DisableWordWrap.m */; };
 		DBD63DD817E1A07E00E941BA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD63DD717E1A07E00E941BA /* Cocoa.framework */; };
 		DBD63DE217E1A07E00E941BA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DBD63DE017E1A07E00E941BA /* InfoPlist.strings */; };
 		DBD63DE417E1A07E00E941BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD63DE317E1A07E00E941BA /* main.m */; };
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DBBF2DA917ED4D4A003C681F /* NSTextView+DisableWordWrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTextView+DisableWordWrap.h"; sourceTree = "<group>"; };
+		DBBF2DAA17ED4D4A003C681F /* NSTextView+DisableWordWrap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTextView+DisableWordWrap.m"; sourceTree = "<group>"; };
 		DBD63DD417E1A07E00E941BA /* TimeCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD63DD717E1A07E00E941BA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DBD63DDA17E1A07E00E941BA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -119,6 +122,8 @@
 				DBD63DE917E1A07E00E941BA /* AppDelegate.h */,
 				DBD63DEA17E1A07E00E941BA /* AppDelegate.m */,
 				DBD63DEC17E1A07E00E941BA /* MainMenu.xib */,
+				DBBF2DA917ED4D4A003C681F /* NSTextView+DisableWordWrap.h */,
+				DBBF2DAA17ED4D4A003C681F /* NSTextView+DisableWordWrap.m */,
 				DBD63E0D17E1A63200E941BA /* clock-tilt copy.icns */,
 				DBD63DDE17E1A07E00E941BA /* Supporting Files */,
 			);
@@ -267,6 +272,7 @@
 			files = (
 				DBD63DE417E1A07E00E941BA /* main.m in Sources */,
 				DBD63DEB17E1A07E00E941BA /* AppDelegate.m in Sources */,
+				DBBF2DAB17ED4D4A003C681F /* NSTextView+DisableWordWrap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
