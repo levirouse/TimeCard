@@ -3,7 +3,7 @@
 //  TimeCard
 //
 //  Created by Levi on 9/12/13.
-//  Copyright (c) 2013 Levi. All rights reserved.
+//  Copyright (c) 2015 Levi Rouse. All rights reserved.
 //
 
 #import "AppDelegate.h"
