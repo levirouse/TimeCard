@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Levi. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface TimeCardTests : SenTestCase
+@interface TimeCardTests : XCTestCase
 
 @end
